@@ -16,6 +16,8 @@
     <!-- Component Scan 패키지 설정 -->
     <context:component-scan base-package="org.zerock.controller"/>
 
+    <context:component-scan base-package="com.spring_mvc.mybatis" />
+
     <!-- 뷰 prefix, suffix 설정 -->
     <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <beans:property name="prefix" value="/WEB-INF/views/"/>
