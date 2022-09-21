@@ -11,8 +11,5 @@
         <module name="ex01" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="studyBook2" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
