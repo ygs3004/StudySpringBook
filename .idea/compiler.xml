@@ -7,9 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="studyBook" />
+        <module name="ex02" />
+        <module name="jex02" />
         <module name="ex01" />
+        <module name="studyBook" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ex01" options="" />
+      <module name="ex02" options="-Xlint:all" />
+      <module name="jex02" options="-Xlint:all" />
+    </option>
   </component>
 </project>

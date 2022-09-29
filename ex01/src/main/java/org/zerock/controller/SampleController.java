@@ -9,6 +9,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import lombok.extern.log4j.Log4j;
+import org.springframework.web.multipart.MultipartFile;
 import org.zerock.domain.SampleDTO;
 import org.zerock.domain.SampleDTOList;
 import org.zerock.domain.TodoDTO;
@@ -21,7 +22,8 @@ import java.util.ArrayList;
 @Log4j
 public class SampleController {
 
-/*    @InitBinder
+    /*
+    @InitBinder
     public void initBinder(WebDataBinder binder){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat,false));
@@ -112,4 +114,20 @@ public class SampleController {
 
         return new ResponseEntity<>(msg, header, HttpStatus.OK);
     }
+
+    @GetMapping("/exUpload")
+    public void exUpload(){
+        log.info("/exUpload......................");
+    }
+
+    @PostMapping("/exUploadPost")
+    public void exUploadPost(ArrayList<MultipartFile> files){
+
+        files.forEach(file -> {
+            log.info("----------------------------------");
+            log.info("name : "+file.getOriginalFilename());
+            log.info("size : "+file.getSize());
+        });
+    }
+
 }

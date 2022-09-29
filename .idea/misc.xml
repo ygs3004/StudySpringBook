@@ -3,6 +3,8 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ex01" />
+    <file type="web" url="file://$PROJECT_DIR$/ex02" />
+    <file type="web" url="file://$PROJECT_DIR$/jex02" />
     <file type="web" url="file://$PROJECT_DIR$/studyBook" />
     <file type="web" url="file://$PROJECT_DIR$/studyBook2" />
   </component>
@@ -11,10 +13,12 @@
       <list>
         <option value="$PROJECT_DIR$/studyBook/pom.xml" />
         <option value="$PROJECT_DIR$/ex01/pom.xml" />
+        <option value="$PROJECT_DIR$/ex02/pom.xml" />
+        <option value="$PROJECT_DIR$/jex02/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
