@@ -6,7 +6,6 @@ import org.zerock.domain.BoardVO;
 import java.util.List;
 
 public interface BoardMapper {
-
     //@Select("SELECT * FROM tbl_board WHERE bno > 0")   BoardMapper.xml 에서 처리되었음
     public List<BoardVO> getList();
 
