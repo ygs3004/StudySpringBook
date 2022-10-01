@@ -33,7 +33,7 @@
     </logger>
 
     <logger name="jdbc.audit">
-        <level value="warn"/>
+        <level value="info"/>
     </logger>
 
     <logger name="jdbc.resultset">
