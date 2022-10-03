@@ -18,6 +18,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Board List Page
+                        <button id="regBtn" type="button" class="btn btn-xs pull-right">Register New Board</button>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -36,7 +37,7 @@
                             <c:forEach items="${list}" var="board">
                                 <tr>
                                     <td><c:out value="${board.bno}"/></td>
-                                    <td><c:out value="${board.title}"/></td>
+                                    <td><a href='/board/get?bno=<c:out value="${board.bno}"/>'><c:out value="${board.title}"/> </a></td>
                                     <td><c:out value="${board.writer}"/></td>
                                     <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}"/></td>
                                     <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updateDate}"/></td>
@@ -71,8 +72,10 @@
         <!-- /.row -->
     <script type="text/javascript">
         $(document).ready(function(){
-            var result = '<c:out value="$result"/>';
+            var result = '<c:out value="${result}"/>';
             checkModal(result);
+
+            history.replaceState({},null,null)
 
             function checkModal(result){
                 if(result===""){
@@ -84,6 +87,10 @@
 
                 $("#myModal").modal("show");
             }
+
+            $("#regBtn").on("click", function(){
+                self.location = "/board/register";
+            });
         });
     </script>
 
