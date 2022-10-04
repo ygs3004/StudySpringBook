@@ -5,8 +5,8 @@ CREATE TABLE tbl_board(
     title VARCHAR2(200) not null,
     content VARCHAR2(2000) not null,
     writer VARCHAR2(50) not null,
-    regdate DATE DEFAULT SYSDATE,
-    updatedate DATE DEFAULT SYSDATE
+    regDate DATE DEFAULT SYSDATE,
+    updateDate DATE DEFAULT SYSDATE
 );
 
 ALTER TABLE tbl_board ADD CONSTRAINT pk_board PRIMARY KEY (bno);

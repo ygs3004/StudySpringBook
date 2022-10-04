@@ -10,7 +10,7 @@
     </select>
 
     <select id="read" resultType="org.zerock.domain.BoardVO">
-        SELECT * FROM tbl_board WHERE bno = #{bno}
+        SELECT /*+ IDEX_ASC(tbl_board pk_board)*/ * FROM tbl_board WHERE bno = #{bno}
     </select>
 
     <insert id="insert">
