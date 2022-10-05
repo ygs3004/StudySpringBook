@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ex01" />
     <file type="web" url="file://$PROJECT_DIR$/ex02" />
+    <file type="web" url="file://$PROJECT_DIR$/ex03" />
     <file type="web" url="file://$PROJECT_DIR$/jex02" />
     <file type="web" url="file://$PROJECT_DIR$/studyBook" />
     <file type="web" url="file://$PROJECT_DIR$/studyBook2" />
@@ -15,6 +16,7 @@
         <option value="$PROJECT_DIR$/ex01/pom.xml" />
         <option value="$PROJECT_DIR$/ex02/pom.xml" />
         <option value="$PROJECT_DIR$/jex02/pom.xml" />
+        <option value="$PROJECT_DIR$/ex03/pom.xml" />
       </list>
     </option>
   </component>
