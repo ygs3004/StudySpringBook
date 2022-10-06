@@ -9,6 +9,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<script type="text/javascript" src="/resources/js/reply.js"></script>
+
+<script type="text/javascript">
+        console.log("======================");
+        console.log("JS TEST");
+
+        var bnoValue = '<c:out value="${board.bno}"/>';
+
+        //for replyService add test
+        replyService.add(
+            {reply:"JS TEST", replyer:"tester", bno:bnoValue}
+            ,
+            function(result) {
+                alert("RESULT: "+result);
+            }
+        );
+</script>
+
 <script type="text/javascript">
     $(function(){
 
