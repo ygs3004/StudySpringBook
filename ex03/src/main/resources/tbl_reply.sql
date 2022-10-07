@@ -7,6 +7,8 @@ CREATE TABLE tbl_reply(
   updateDate DATE DEFAULT SYSDATE
 );
 
+INSERT INTO VALUES(1, )
+
 CREATE SEQUENCE seq_reply;
 
 ALTER TABLE tbl_reply ADD CONSTRAINT pk_reply primary key (rno);
