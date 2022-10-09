@@ -4,6 +4,8 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/ex02/src/main/webapp/WEB-INF/views/includes/header.jsp" value="file://$PROJECT_DIR$/ex02/src/main/webapp/WEB-INF/views/includes" />
+        <entry key="file://$PROJECT_DIR$/ex05/src/main/webapp/WEB-INF/views/board/get.jsp" value="file://$PROJECT_DIR$/ex05/src/main/webapp/WEB-INF/views/board" />
+        <entry key="file://$PROJECT_DIR$/exFileUp/src/main/webapp/WEB-INF/views/uploadAjax.jsp" value="file://$PROJECT_DIR$/exFileUp/src/main/webapp/WEB-INF/views" />
       </map>
     </option>
   </component>

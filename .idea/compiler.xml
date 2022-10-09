@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="exFileUp" />
         <module name="ex04" />
         <module name="ex03" />
         <module name="ex02" />
@@ -15,7 +16,9 @@
         <module name="studyBook" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="exFile" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -23,6 +26,9 @@
       <module name="ex02" options="-Xlint:all" />
       <module name="ex03" options="-Xlint:all" />
       <module name="ex04" options="-Xlint:all" />
+      <module name="ex05" options="" />
+      <module name="exFile" options="-Xlint:all" />
+      <module name="exFileUp" options="-Xlint:all" />
       <module name="jex02" options="-Xlint:all" />
     </option>
   </component>
