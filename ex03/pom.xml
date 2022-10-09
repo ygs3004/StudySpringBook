@@ -139,7 +139,6 @@
 
     </dependencies>
     <build>
-        <finalName>ex03</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -1,7 +1,6 @@
 package org.zerock.controller;
 
 import lombok.extern.log4j.Log4j;
-import org.apache.ibatis.javassist.tools.rmi.Sample;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

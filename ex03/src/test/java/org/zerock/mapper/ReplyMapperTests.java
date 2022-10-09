@@ -74,6 +74,15 @@ public class ReplyMapperTests {
     }
 
     @Test
+    public void testList2(){
+        Criteria cri = new Criteria(2, 10);
+        // 임의의 게시판 3476L
+        List<ReplyVO> replies = mapper.getListWithPaging(cri ,3476L);
+        replies.forEach(reply -> log.info(reply));
+
+    }
+
+    @Test
     public void testMapper(){
         log.info(mapper);
     }

@@ -7,8 +7,6 @@ CREATE TABLE tbl_reply(
   updateDate DATE DEFAULT SYSDATE
 );
 
-INSERT INTO VALUES(1, )
-
 CREATE SEQUENCE seq_reply;
 
 ALTER TABLE tbl_reply ADD CONSTRAINT pk_reply primary key (rno);
@@ -18,3 +16,7 @@ ALTER TABLE tbl_reply ADD CONSTRAINT fk_reply_board foreign key (bno) references
 SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno DESC;
 
 SELECT * FROM tbl_reply ORDER BY rno DESC;
+
+CREATE INDEX idx_reply ON tbl_reply ( bno DESC, rno ASC);
+
+COMMIT;
