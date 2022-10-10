@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex05/error_delte.iml" filepath="$PROJECT_DIR$/ex05/error_delte.iml" />
     </modules>
   </component>
 </project>

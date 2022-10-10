@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/error_delte/exFile/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/error_delte/exFile/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ex03/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ex03/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ex04/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ex04/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ex05/exFile/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ex05/exFile/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ex05n/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ex05n/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/exFileUp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/exFileUp/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
