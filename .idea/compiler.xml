@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ex05n" />
         <module name="exFileUp" />
+        <module name="ex06" />
         <module name="ex04" />
         <module name="ex03" />
         <module name="ex02" />
@@ -19,7 +20,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="error_delte" target="1.8" />
-      <module name="ex06" target="1.8" />
       <module name="exFile" target="1.8" />
     </bytecodeTargetLevel>
   </component>
