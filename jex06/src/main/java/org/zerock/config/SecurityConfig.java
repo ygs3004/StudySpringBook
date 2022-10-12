@@ -9,10 +9,14 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.zerock.security.CustomLoginSuccessHandler;
+import org.zerock.security.CustomUserDetailsService;
 import sun.security.util.Password;
 
 import javax.sql.DataSource;
@@ -38,6 +42,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/customLogout")
                 .invalidateHttpSession(true)
                 .deleteCookies("remember-me", "JSESSION_ID");
+
+        http.rememberMe()
+                .key("zerock")
+                .tokenRepository(persistentTokenRepository())
+                .tokenValiditySeconds(604800);
+    }
+
+    @Bean // remember-me 설정
+    public PersistentTokenRepository persistentTokenRepository(){
+        JdbcTokenRepositoryImpl repo = new JdbcTokenRepositoryImpl();
+        repo.setDataSource(dataSource);
+        return repo;
     }
 
     @Bean // CustomLoginSuccessHandler
@@ -50,6 +66,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public UserDetailsService customUserService(){
+        return new CustomUserDetailsService();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+        auth.userDetailsService(customUserService()).passwordEncoder(passwordEncoder());
+    }
+
+    /* JDBC 설정
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception{
         log.info("configure JDBC......................");
@@ -63,6 +90,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .usersByUsernameQuery(queryUser)
                 .authoritiesByUsernameQuery(queryDetails);
     }
+    */
 
     /* 클래스에 로그인 정보 저장
     @Override

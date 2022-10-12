@@ -2,9 +2,8 @@ package org.zerock.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.core.io.FileSystemResource;
+import org.springframework.security.config.annotation.authentication.configuration.EnableGlobalAuthentication;
 import org.springframework.web.multipart.MultipartResolver;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -13,11 +12,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import javax.servlet.ServletRegistration;
-import java.io.IOException;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.zerock.controller", "org.zerock.exception"})
+@ComponentScan(basePackages = {"org.zerock.controller"}) // , "org.zerock.exception"
+@EnableGlobalAuthentication // (prePostEnabled=true, securedEnabled=true) 왜인지 안댐; 버젼?
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override

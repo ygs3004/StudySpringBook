@@ -187,6 +187,11 @@
       <artifactId>spring-security-taglibs</artifactId>
       <version>${org.springframework.security-version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.lucee</groupId>
+      <artifactId>jsr250</artifactId>
+      <version>1.0.0</version>
+    </dependency>
 
   </dependencies>
   <build>
