@@ -9,6 +9,7 @@
     <bean id="customLoginSuccess" class="org.zerock.security.CustomLoginSuccessHandler"/>
 <!--    <bean id="customPasswordEncoder" class="org.zerock.security.CustomNoOpPasswordEncoder"/>  비번 Encoder를 사용하지 않을 경우 -->
     <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    <bean id="customUserDetailService" class="org.zerock.security.CustomUserDetailsService"/>
 
     <security:http auto-config="true" use-expressions="true">
         <security:intercept-url pattern="/sample/all" access="permitAll()"/>
@@ -18,19 +19,27 @@
         <!--<security:access-denied-handler error-page="/accessError"/>-->
         <security:access-denied-handler ref="customAccessDenied"/>
         <security:form-login login-page="/customLogin" authentication-success-handler-ref="customLoginSuccess"/>
-        <security:logout logout-url="/customLogout" invalidate-session="true"/>
         <!--<security:csrf disabled="true"/> csrf 보안옵션 Off할 경우, 서버와 클라이언트간의 csrf 값을 비교 -->
+
+        <!-- 자동 로그인(Remember me) -->
+        <security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/>
+        <!-- 로그아웃 -->
+        <security:logout logout-url="/customLogout" invalidate-session="true" delete-cookies="remember-me, JSESSION_ID"/>
     </security:http>
 
     <security:authentication-manager>
-        <security:authentication-provider>
+        <security:authentication-provider user-service-ref="customUserDetailService">
 
             <!--<security:jdbc-user-service data-source-ref="dataSource"/>-->
+            <!-- JDBC를 이용한 간편 인증 / 권한 처리
             <security:jdbc-user-service data-source-ref="dataSource"
                                         users-by-username-query="SELECT userid, userpw, enabled FROM tbl_member WHERE userid = ?"
                                         authorities-by-username-query="SELECT userid, auth FROM tbl_member_auth WHERE userid = ?"/>
+            -->
+
             <security:password-encoder ref="bcryptPasswordEncoder"/>
             <!-- <security:password-encoder ref="customPasswordEncoder"/> change to Bcrypt -->
+
                 <!--
                 <security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
                 &lt;!&ndash; {noop} <- 인코딩 처리 없이 비번사용, 원래는 PasswordEncoder 지정 필요 https://spring.io/blog/2017/11/01/spring-security-5-0-0-rc1-released#password-storage-format &ndash;&gt;

@@ -10,6 +10,7 @@
         <module name="ex05n" />
         <module name="exFileUp" />
         <module name="ex06" />
+        <module name="jex06" />
         <module name="ex04" />
         <module name="ex03" />
         <module name="ex02" />
@@ -35,6 +36,7 @@
       <module name="exFile" options="-Xlint:all" />
       <module name="exFileUp" options="-Xlint:all" />
       <module name="jex02" options="-Xlint:all" />
+      <module name="jex06" options="-Xlint:all" />
     </option>
   </component>
 </project>

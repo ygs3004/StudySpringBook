@@ -11,6 +11,7 @@
     <file type="web" url="file://$PROJECT_DIR$/ex06" />
     <file type="web" url="file://$PROJECT_DIR$/exFileUp" />
     <file type="web" url="file://$PROJECT_DIR$/jex02" />
+    <file type="web" url="file://$PROJECT_DIR$/jex06" />
     <file type="web" url="file://$PROJECT_DIR$/studyBook" />
     <file type="web" url="file://$PROJECT_DIR$/studyBook2" />
   </component>
@@ -27,6 +28,7 @@
         <option value="$PROJECT_DIR$/exFileUp/pom.xml" />
         <option value="$PROJECT_DIR$/ex05n/pom.xml" />
         <option value="$PROJECT_DIR$/ex06/pom.xml" />
+        <option value="$PROJECT_DIR$/jex06/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
